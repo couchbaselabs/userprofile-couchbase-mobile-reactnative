@@ -54,7 +54,7 @@ The instructions apply to standalone, query and sync versions of the app.
 * clone repository
 
 ```bash
-git clone https://github.com/couchbaselabs/userprofile-couchbase-mobile-reactnative-android
+git clone https://github.com/couchbaselabs/userprofile-couchbase-mobile-reactnative
 ```
 
 * Go to the folder containing the appropriate version of app. For example, for the "standalone" version of app, switch to standalone folder, for the "query" version of app, switch to "query" folder and so on.
@@ -136,7 +136,7 @@ The instructions apply to standalone, query and sync versions of the app
 * clone repository
 
 ```bash
-git clone https://github.com/couchbaselabs/userprofile-couchbase-mobile-reactnative-android
+git clone https://github.com/couchbaselabs/userprofile-couchbase-mobile-reactnative
 ```
 
 * Go to the folder containing the appropriate version of app. For example, for the "standalone" version of app, switch to standalone folder, for the "query" version of app, switch to "query" folder and so on.
