@@ -1,5 +1,5 @@
 # Overview
-Example of a simple React Native app that uses Couchbase Lite as embedded datastore for offline data storage. 
+Example of a simple React Native app that uses Couchbase Lite as embedded datastore for offline data storage.
 The app uses a reference implementation of a React Native plugin that exports a subset of couchbase lite native APIs to Javascript.
 
 **LICENSE**: The source code for the app and React Native plugin is Apache-licensed, as specified in LICENSE. However, the usage of Couchbase Lite will be guided by the terms and conditions specified in Couchbase's Enterprise or Community License agreements.
@@ -9,7 +9,7 @@ To build the app for specific platform, follow the instructions in the top level
 
 # App Functionality
 
-This version of app extends the "standalone" version of the app and demonstrates basic database [query](https://docs.couchbase.com/couchbase-lite/3.0/android/query-n1ql-mobile.html) and [full-text-search](https://docs.couchbase.com/couchbase-lite/3.0/android/fts.html) operations against Couhbase Lite database. In addition to the "user" database, this version of the app is bundled with a second "university" database pre-seeded with documents against which queries are issued. You can learn more about [prebuilt database](https://docs.couchbase.com/couchbase-lite/3.0/android/prebuilt-database.html). 
+This version of app extends the "standalone" version of the app and demonstrates basic database [query](https://docs.couchbase.com/couchbase-lite/3.0/android/query-n1ql-mobile.html) and [full-text-search](https://docs.couchbase.com/couchbase-lite/3.0/android/fts.html) operations against Couchbase Lite database. In addition to the "user" database, this version of the app is bundled with a second "university" database pre-seeded with documents against which queries are issued. You can learn more about [prebuilt database](https://docs.couchbase.com/couchbase-lite/3.0/android/prebuilt-database.html).
 
 This app does the following
 
@@ -17,7 +17,7 @@ This app does the following
 
 * As part of profile information, users can now selecting a "university" from a list of possible options
 
-The list of matching univerisities is queried (using the new Query API) from a local prebuilt "University" Couchbase Lite Database that is bundled in the app. The user profile information is persisted as a Document in the local Couchbase Lite Database. So subsquently, when the user logs out and logs back in again, the profile information is loaded from the Database.
+The list of matching universities is queried (using the new Query API) from a local prebuilt "University" Couchbase Lite Database that is bundled in the app. The user profile information is persisted as a Document in the local Couchbase Lite Database. So subsequently, when the user logs out and logs back in again, the profile information is loaded from the Database.
 
 
 Refer to "**ios**" folder for iOS version of app and the "**android**" folder for Android version of the app.
@@ -27,16 +27,16 @@ Refer to "**ios**" folder for iOS version of app and the "**android**" folder fo
 Couchbase Lite is a JSON Document Store. A Document is a logical collection of named fields and values.The values are any valid JSON types. In addition to the standard JSON types, Couchbase Lite supports Date and Blob data types. While it is not required or enforced, it is a recommended practice to include a "type" property that can serve as a namespace for related documents.
 
 ##  The "User Profile" Document
-The app deals with a single document with a "type" property of "user". The document ID is of the form **"user::<email>"**. 
+The app deals with a single document with a "type" property of "user". The document ID is of the form **"user::<email>"**.
 
 An example of a document would be
 ```json
 {
     "type":"user",
     "name":"Jane Doe",
-    "email":"jame.doe@earth.org",
+    "email":"jane.doe@earth.org",
     "address":"101 Main Street",
-    "profilePic": << Blob Metadata >> 
+    "profilePic": << Blob Metadata >>
 }
 ```
 The `profilePic` holds metadata of the binary image data associated with the document

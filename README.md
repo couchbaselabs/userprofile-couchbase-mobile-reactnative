@@ -4,9 +4,9 @@ The app uses a [reference implementation of React Native Module](https://github.
 
 LICENSE: The source code for the app is Apache-licensed, as specified in LICENSE. However, the usage of Couchbase Lite will be guided by the terms and conditions specified in Couchbase's Enterprise or Community License agreements.
 
-This repo contains three versions of the app, each building on the previous version of the app and demonstrating a specific addional functionality of Couchbase Lite. Each version of the app includes an iOS version and a corrresponding Android version.
+This repo contains three versions of the app, each building on the previous version of the app and demonstrating a specific additional functionality of Couchbase Lite. Each version of the app includes an iOS version and a corresponding Android version.
 
-# Demo 
+# Demo
 
 Shown below is a demonstration of data sync capability between iOS and Android versions of the app
 
@@ -14,12 +14,12 @@ Shown below is a demonstration of data sync capability between iOS and Android v
 # Folder Overview
 
 ## standalone
-This version of app demonstrates basic database and document CRUD operations using Couhbase Lite as a standalone, embedded database within your mobile app. A document is created and stored in a "user" Couchbase Lite database.
+This version of app demonstrates basic database and document CRUD operations using Couchbase Lite as a standalone, embedded database within your mobile app. A document is created and stored in a "user" Couchbase Lite database.
 
 For details, refer to the README in the "standalone" folder of the repo.
 
 ## query
-This version of app extends the "standalone" version of the app and demonstrates basic query and full-text-search operations against Couhbase Lite database. In addition to the "user" database, this version of the app is bundled with a second "university" database pre-seeded with documents against which queries are issued.
+This version of app extends the "standalone" version of the app and demonstrates basic query and full-text-search operations against Couchbase Lite database. In addition to the "user" database, this version of the app is bundled with a second "university" database pre-seeded with documents against which queries are issued.
 
 For details, refer to the README in the "query" folder of the repo.
 
@@ -30,7 +30,7 @@ For details, refer to the README in the "sync" folder of the repo.
 
 # Getting Started
 
-Each version of the app includes an iOS version and a corrresponding Android version. Follow the corresponding instructions based on the version you are building.
+Each version of the app includes an iOS version and a corresponding Android version. Follow the corresponding instructions based on the version you are building.
 
 ## Android Version
 
@@ -38,7 +38,7 @@ The instructions apply to standalone, query and sync versions of the app.
 
 **Prerequisites**
 
-* [React Native Development Tools](https://reactnative.dev/docs/environment-setup). 
+* [React Native Development Tools](https://reactnative.dev/docs/environment-setup).
 * Install node v16 or newer. This includes npx.
 * npm v8+ (installed globally)
 * yarn version 1.22+ (installed globally)
@@ -46,7 +46,7 @@ The instructions apply to standalone, query and sync versions of the app.
 * Android device or emulator running API level 29 or above
 * Android SDK 29
 * Android Build Tools 29
-* [JDK 8 (min)](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
+* [JDK 8 (min)](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 
 **Build**
@@ -63,16 +63,16 @@ git clone https://github.com/couchbaselabs/userprofile-couchbase-mobile-reactnat
 cd  /path/to/cloned-repo/standalone
 
 ```
- 
-* Install couchbase lite react native plugin. For this, follow [instructions](https://github.com/couchbaselabs/couchbase-lite-react-native-module/) to add the module to the project. Instructions are repeated here for convenience. In case of discrepencies, refer to the module repo.
- 
+
+* Install couchbase lite react native plugin. For this, follow [instructions](https://github.com/couchbaselabs/couchbase-lite-react-native-module/) to add the module to the project. Instructions are repeated here for convenience. In case of discrepancies, refer to the module repo.
+
 ```bash
  yarn add https://github.com/couchbaselabs/couchbase-lite-react-native-module
 
 ```
- 
-* Install dependencies 
- 
+
+* Install dependencies
+
 ```bash
  npm install
 ```
@@ -80,12 +80,12 @@ cd  /path/to/cloned-repo/standalone
 * Add native couchbase lite framework as a dependency
 
 The module does not come bundled with the couchbase lite framework. You will have to include the appropriately licensed Couchbase Lite Android library as dependency within your app.
- 
-The React native reference module requires minimal version of **Couchbase Lite v3.0.0**. 
+
+The React native reference module requires minimal version of **Couchbase Lite v3.0.0**.
 
 * Open the Android project located inside your React Native project under directory: `/path/to/userprofile-couchbase-mobile-reactnative-android/android` using Android Studio.
 
-In your 'app' level `build.gradle` file, add your library file path 
+In your 'app' level `build.gradle` file, add your library file path
 
 ```bash
  dependencies {
@@ -93,7 +93,7 @@ In your 'app' level `build.gradle` file, add your library file path
  }
 ```
 
-In your 'project' level `build.gradle` file, add your library file path. 
+In your 'project' level `build.gradle` file, add your library file path.
 
 ```bash
  buildscript {
@@ -110,7 +110,7 @@ In your 'project' level `build.gradle` file, add your library file path.
 
 **Running the App**
 
-Build and run the app per instructions in [Getting Started Guide]("https://reactnative.dev/docs/environment-setup"). You can run the app direcly from Android Studio or from command line.
+Build and run the app per instructions in [Getting Started Guide]("https://reactnative.dev/docs/environment-setup"). You can run the app directly from Android Studio or from command line.
 
 Don't forget to start the Metro bundler before running your app!
 
@@ -124,7 +124,7 @@ The instructions apply to standalone, query and sync versions of the app
 
 **Prerequisites**
 
-* [React Native Development Tools](https://reactnative.dev/docs/environment-setup). 
+* [React Native Development Tools](https://reactnative.dev/docs/environment-setup).
 * Install node v16 or newer. This includes npx.
 * npm v8+ (installed globally)
 * yarn version 1.22+ (installed globally)
@@ -145,16 +145,16 @@ git clone https://github.com/couchbaselabs/userprofile-couchbase-mobile-reactnat
 cd  /path/to/cloned-repo/standalone
 
 ```
- 
-* Install couchbase lite react native plugin. For this, follow [instructions](https://github.com/couchbaselabs/couchbase-lite-react-native-module/) to add the module to the project. Instructions are repeated here for convenience. In case of discrepencies, refer to the module repo.
- 
+
+* Install couchbase lite react native plugin. For this, follow [instructions](https://github.com/couchbaselabs/couchbase-lite-react-native-module/) to add the module to the project. Instructions are repeated here for convenience. In case of discrepancies, refer to the module repo.
+
 ```bash
  yarn add https://github.com/couchbaselabs/couchbase-lite-react-native-module
 
 ```
- 
-* Install dependencies 
- 
+
+* Install dependencies
+
 ```bash
  npm install
 ```
@@ -174,7 +174,7 @@ open userprofiledemo.xcworkspace
 ```
 
 ##  Running the App
-Build and run the app per instructions in [Getting Started Guide]("https://reactnative.dev/docs/environment-setup"). You can run the app direcly from Xcode or from command line.
+Build and run the app per instructions in [Getting Started Guide]("https://reactnative.dev/docs/environment-setup"). You can run the app directly from Xcode or from command line.
 
 Don't forget to start the Metro bundler before running your app!
 
