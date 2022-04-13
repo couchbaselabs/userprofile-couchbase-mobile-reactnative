@@ -1,5 +1,5 @@
 # Overview
-Example of a simple React Native app that uses Couchbase Lite as embedded datastore for offline first data storage. 
+Example of a simple React Native app that uses Couchbase Lite as embedded datastore for offline first data storage.
 The app uses a reference implementation of a React Native plugin that exports a subset of couchbase lite native APIs to Javascript.
 
 **LICENSE**: The source code for the app and React Native plugin is Apache-licensed, as specified in LICENSE. However, the usage of Couchbase Lite will be guided by the terms and conditions specified in Couchbase's Enterprise or Community License agreements.
@@ -12,7 +12,7 @@ To build the app for specific platform, follow the instructions in the top level
 This version of app extends the "query" version of the app and demonstrates basic database sync functionality. The app supports bi-directional sync with a remote Couchbase Server database through a [Sync Gateway](https://docs.couchbase.com/couchbase-lite/3.0/android/replication.html).
 
 
-Couchbase Sync Gateway is a key component of the Couchbase Mobile stack. It is an Internet-facing synchronization mechanism that securely syncs data across devices as well as between devices and the cloud. 
+Couchbase Sync Gateway is a key component of the Couchbase Mobile stack. It is an Internet-facing synchronization mechanism that securely syncs data across devices as well as between devices and the cloud.
 
 The core functions of the Sync Gateway include
 
@@ -35,16 +35,16 @@ Refer to "**ios**" folder for iOS version of app and the "**android**" folder fo
 Couchbase Lite is a JSON Document Store. A Document is a logical collection of named fields and values.The values are any valid JSON types. In addition to the standard JSON types, Couchbase Lite supports Date and Blob data types. While it is not required or enforced, it is a recommended practice to include a "type" property that can serve as a namespace for related documents.
 
 ## The "User Profile" Document
-The app deals with a single document with a "type" property of "user". The document ID is of the form **"user::<email>"**. 
+The app deals with a single document with a "type" property of "user". The document ID is of the form **"user::<email>"**.
 
 An example of a document would be
 ```json
 {
     "type":"user",
     "name":"Jane Doe",
-    "email":"jame.doe@earth.org",
+    "email":"jane.doe@earth.org",
     "address":"101 Main Street",
-    "profilePic": << Blob Metadata >> 
+    "profilePic": << Blob Metadata >>
 }
 ```
 The `profilePic` holds metadata of the binary image data associated with the document
@@ -68,7 +68,7 @@ The app comes bundled with a collection of Documents of type "university". Each 
 ```
 
 # Backend Installation
-We will install Couchbase Server and Sync Gateway using docker. 
+We will install Couchbase Server and Sync Gateway using docker.
 
 ## Prerequisites
 
@@ -78,7 +78,7 @@ We will install Couchbase Server and Sync Gateway using docker.
 * Create a docker network named “workshop”
 
 ```bash
-docker network ls 
+docker network ls
 
 docker network create -d bridge workshop
 ```
@@ -99,7 +99,7 @@ docker run -d --name cb-server --network workshop -p 8091-8094:8091-8094 -p 1121
 ```
 ### Test Server Install
 
-* The server would take a few minutes to deploy and get fully initialized. So be patient. 
+* The server would take a few minutes to deploy and get fully initialized. So be patient.
 
 ```bash
 docker logs -f cb-server
@@ -115,7 +115,7 @@ docker logs -f cb-server
 > Accept: */*
 > Content-Length: 50
 > Content-Type: application/x-www-form-urlencoded
-> 
+>
 } [50 bytes data]
 * upload completely sent off: 50 out of 50 bytes
 * Mark bundle as not supporting multiuse
@@ -132,7 +132,7 @@ docker logs -f cb-server
 < X-Frame-Options: DENY
 < X-Permitted-Cross-Domain-Policies: none
 < X-XSS-Protection: 1; mode=block
-< 
+<
 100    50    0     0  100    50      0   4166 --:--:-- --:--:-- --:--:--  4545
 * Closing connection 0
 SUCCESS: Bucket created
@@ -241,7 +241,7 @@ Now that we have the server and sync gateway backend installed, we can verify da
 The follow steps must follow the steps in the previous "Try It Out" section
 
 * Log into Couchbase Server by accessing the admin UI at `http://localhost:8091`
-* Search for document with ID `"user::demo@example.com"`. 
+* Search for document with ID `"user::demo@example.com"`.
 * Edit the document
 * Confirm that the changes show up on the clients
 

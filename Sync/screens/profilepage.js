@@ -61,7 +61,7 @@ export default class Profile extends React.Component {
                     this.setState({
                         imagepath: imageuri,
                     });
-                    
+
                 }, (errorResponse) => {
                     alert("There was a problem while fetching profile image. Details : " + errorResponse);
                 });
@@ -290,7 +290,7 @@ export default class Profile extends React.Component {
             else {
                 this.error_callback();
             }
-        }, (err) => { console.log("univerisities " + err); })// this.error_callback);
+        }, (err) => { console.log("universities " + err); })// this.error_callback);
 
 
     }
